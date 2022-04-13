@@ -1,14 +1,14 @@
 {
-    "version": "2.0.0",
+	"version": "2.0.0",
 	"tasks": [
 		{
-			"type": "cppbuild",
-			"label": "Build - fileBase",
+			"type": "shell",
+			"label": "my-C_Build",
 			"command": "C:\\MinGW\\bin\\gcc.exe",
 			"args": [
-				"${fileBasenameNoExtension}.c",
-				//"${fileBasenameNoExtension}_f.c",
-				"-g", "-o",
+				"-g",
+				"${file}",
+				"-o",
 				"${fileBasenameNoExtension}.exe"
 			],
 			"options": {
@@ -22,7 +22,6 @@
 				"isDefault": true
 			},
 			"detail": "compilador: C:\\MinGW\\bin\\gcc.exe"
-		},
-		
+		}
 	]
 }

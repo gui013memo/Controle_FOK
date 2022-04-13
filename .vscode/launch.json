@@ -1,29 +1,20 @@
 {
-       // Use IntelliSense to learn about possible attributes.
+    // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "gcc.exe - Build and debug active file",
+            "name": "my-LaunchDBG",
             "type": "cppdbg",
-            "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
-            "args": [],
+            "request": "launch", // A request deve ser launch e nao attach
+            "program": "${fileDirname}\\${fileBasenameNoExtension}", // Precisa especificar diretorio do programa a executar
             "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": true,
-            "MIMode": "gdb",
+            "cwd": "${fileDirname}", 
+            "externalConsole": true, 
+            "MIMode": "gdb", // Para selecionar entre LLDB ou GDB
             "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ],
-            "preLaunchTask": "Build - fileBase"
+            "preLaunchTask": "my-C_Build" // Tarefa executada antes de rodar, deve ser nome identico ao build task padrao
         }
     ]
 }
